@@ -1,0 +1,74 @@
+/*FAZER BARRAS LATERAIS, IGUAIS AS DO TOPO*/
+
+/*FONTE*/
+.font_sans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*TABELA*/
+th {
+    color : #00c6af;
+    text-align: center;
+    border:solid 1px;
+}
+td {
+    color : #1a3571;
+    text-align: center;
+    border:solid 1px;
+}
+tr{
+    border:solid 1px;
+}
+
+/*DESIGN DO TOPO*/
+.topo{
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 10px;
+    width: 100%;
+    height: 25px;
+    background: #1a3571;
+    -webkit-animation: mymove 7s infinite;
+    
+}
+.topo a:link{
+    color:#ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    float: center;
+    margin-left: 3%;
+}
+
+.topo a:hover{
+    border-radius: 40%;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+.topo a:visited{
+    color:#ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    float: center;
+    margin-left: 3%;
+}
+
+/*DESIGN DO TITULO*/
+.titulo{
+    font-family: 'Open Sans', sans-serif;
+    font-size:35px;
+}
+
+/*DESIGN DO CORPO*/
+.corpo{
+    font-family: 'Open Sans', sans-serif;
+    font-size:15px;
+}
+
+/*OUTROS*/
+@keyframes mymove {
+    50% {background: #00c6b0 bottom right/50px 50px;}
+}
