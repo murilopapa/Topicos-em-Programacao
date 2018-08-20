@@ -12,26 +12,31 @@
 .img_perfil{
     position: relative;
     margin: 0px;
-    top: -185px;
-    left: 20px;
-    width: 15%;
-    height: 15%;
+    top: -250px;
+    left: 1%;
+    width: 20%;
+    height: 20%;
 }
 .corpo{
     position: relative;
 }
 .titulo{
-    border-width: 1px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
     text-align: center;
 }
+.sub-titulo{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    text-align: left;
+}
+
 .descricao{
-    margin-left: 15px;
+    margin-left: 1%;
     position: relative;
     border-width: 1px;
     top: 100px;
-}
-body{
-    background-color: #e9ebee;
 }
 .link{
     position: relative;
