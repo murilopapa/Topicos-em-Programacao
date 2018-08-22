@@ -1,0 +1,10 @@
+*{
+    margin:0 auto;
+}
+.caixa_topo{
+    border: solid 5px;
+    width: 100%;
+    height: 150px;
+    background-image: url("\img\chicago.jpg");
+    background-size: cover;
+}

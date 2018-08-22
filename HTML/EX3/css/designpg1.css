@@ -2,7 +2,7 @@
     margin:0 auto;
 }
 .borda{
-    /*border: solid 3px;*/
+    border: solid 0px;
 }
 body{
     position: relative;
@@ -13,12 +13,12 @@ body{
 .topo{
     position: relative;
     width: 100%;
-    height: 20%;
+    height: 100%;
 }
 .img_perfil{
     position: relative;
     margin: 0px;
-    margin-top: -12%;
+    margin-top: -11%;
     left: 1%;
     width: 20%;
     height: 40%;
@@ -42,7 +42,6 @@ body{
     font-family: 'Comfortaa', cursive;
     margin-left: 1%;
     position: relative;
-    border-width: 1px;
     margin-top: 7%;
 }
 .link{
