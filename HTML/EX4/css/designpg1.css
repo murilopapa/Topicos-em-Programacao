@@ -9,9 +9,10 @@ body{
     font-family: 'Comfortaa', cursive;
 }
 .corpo{
-    
+    float: left;
 }
 .titulo{
+    text-align: center;
     font-size: 2.0em;
     font-weight: lighter;
 }
@@ -20,7 +21,34 @@ body{
     font-size: 1.4em;
     text-align: left;
 }
-
 .descricao{
     position: relative;
+}
+.texto{
+    background-color: rgb(221, 221, 221);
+    padding: 0.5%;
+    width: 25%;
+    margin-top: 0.4%; 
+    display: inline-block;
+}
+
+.formulario{
+    background-color: rgb(238, 238, 238);
+    position: relative;
+    padding: 0.4%;   
+    width: 30%;
+    margin-top: 0.4%; 
+    display: inline-block;
+}
+input{
+    font-family: 'Comfortaa', cursive;
+}
+select{
+    font-family: 'Comfortaa', cursive;
+}
+option{
+    font-family: 'Comfortaa', cursive;
+}
+textarea{
+    font-family: 'Comfortaa', cursive;
 }

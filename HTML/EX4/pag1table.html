@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang = "pt-BR" >
+    <head>
+        <meta charset="utf-8">        
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Jua" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/designpg1.css">
+        <title>Curriculo</title>
+    </head>
+    <body>
+        <div class="corpo">
+            <div class="titulo">
+                Cadastre seu currículo<br/>
+            </div>
+            <br/><br/>
+            <form name="form1" autocomplete="off" action="salvarDados" method="POST">
+                <div class="sub-titulo">
+                    1. Dados Pessoais<br/>
+                </div>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <td><input type="text" name="nome" placeholder="Digite seu nome" required/><br/></td>
+                    </tr>
+                    <tr>
+                        <th>Data de nascimento</th>
+                        <td><input type="date" name="data" required/><br/></td>
+                    </tr>
+                    <tr>
+                        <th>Estado Civil</th>
+                        <td>
+                            <select name="estado civil" placeholder="Selecione o estado civil">
+                                <option value="casado">Casado(a)</option>
+                                <option selected value="solteiro">Solteiro(a)</option>
+                                <option value="viúvo">Viúvo(a)</option>
+                                <option value="divorciado">Divorciado(a)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sexo</th>
+                        <td>
+                            <input type="radio" name="sexo" value="male" />Masculino
+                            <input type="radio" name="sexo" value="female" />Feminino
+                        </td>
+                    </tr>
+                </table>
+
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div class="sub-titulo">
+                    2. Objetivo<br/>
+                </div>
+                <table>
+                    <tr>
+                        <th>Objetivo</th>
+                        <td><textarea name="objetivo" cols="100" rows="10" placeholder="Digite seu objetivo" required></textarea></td>
+                    </tr>
+                </table>
+                
+                <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                <div class="sub-titulo">
+                    3. Contato<br/>
+                </div>
+                <table>
+                    <tr>
+                        <th>Endereço</th>
+                        <td><input type="text" name="endereco" placeholder="Digite seu endereço" required/></td>
+                    </tr>
+                    <tr>
+                        <th>Cidade/Estado</th>
+                        <td><input type="text" name="cidade" placeholder="Digite sua cidade" required/> / <input type="text" name="estado" placeholder="Digite seu estado" required/></td>
+                    </tr>
+                    <tr>
+                        <th>CEP</th>
+                        <td><input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="99999-999" required/></td>
+                    </tr>
+                    <tr>
+                        <th>Telefone</th>
+                        <td><input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}" placeholder="(99)9999-9999" required/></td>
+                    </tr>
+                    <tr>
+                        <th>E-mail</th>
+                        <td><input type="text" name="e-mail" placeholder="Digite seu e-mail" required/></td>
+                    </tr>
+                    <tr>
+                        <th>Rede social</th>
+                        <td></td>
+                    </tr>
+                </table>
+                <br/><br/>
+                <div class="sub-titulo">
+                    4. Conhecimentos<br/>
+                </div>
+                <div class="descricao">
+                    Linguagens de Programação<br/>
+                    <input type="checkbox" name="linguagem" value="C/C++" />C/C++<br>
+                    <input type="checkbox" name="linguagem" value="Java" />Java<br>
+                    <input type="checkbox" name="linguagem" value="Visual Basic" />Visual Basic<br>
+                    <input type="checkbox" name="linguagem" value=".Net" />.Net<br>
+                    <input type="checkbox" name="linguagem" value="PHP" />PHP<br>
+                    <input type="checkbox" name="linguagem" value="Python" />Python<br>
+                    <input type="checkbox" name="linguagem" value="HTML"    />HTML<br>
+                    Idiomas
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
