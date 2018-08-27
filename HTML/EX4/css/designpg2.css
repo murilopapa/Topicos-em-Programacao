@@ -1,0 +1,35 @@
+*{
+    margin:0 auto;
+}
+body{
+    font-family: 'Comfortaa', cursive; 
+}
+
+.corpo{
+    
+    position: relative;
+    margin-top: 0%;
+}
+.titulo{
+    font-family: 'Jua', sans-serif;  
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+.sub-titulo{
+    font-family: 'Jua', sans-serif;  
+    font-size: 30px;
+    text-align: left;
+}
+
+.descricao{
+    margin-left: 1%;
+    position: relative;
+    border-width: 1px;
+    margin-top: 7%;
+}
+.link{
+    position: relative;
+    right: 1%;
+    float: right;
+}

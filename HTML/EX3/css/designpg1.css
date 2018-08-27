@@ -29,13 +29,14 @@ body{
     margin-bottom: 5%;
 }
 .titulo{
+    position: relative;
     font-size: 2.5em;
     font-weight: lighter;
-    position: relative;
     margin-right: 35%;
     margin-left: 25%;
 }
 .sub-titulo{
+    position: relative;
     font-size: 1.875em;
     text-align: left;
 }
@@ -53,4 +54,17 @@ body{
     margin-top: 1%;
     margin-right: 0.75%;
     float: right;
+}
+a:link {
+    color: rgb(0, 132, 255);
+}
+a:hover {
+    color:rgb(255, 0, 221);
+}
+a:active {
+    color:rgb(255, 0, 221);
+}
+a:visited{
+    color: rgb(0, 132, 255);
+
 }

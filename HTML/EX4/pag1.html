@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "pt-BR" >
+    <head>
+        <meta charset="utf-8">        
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Jua" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/designpg1.css">
+        <title>Curriculo</title>
+    </head>
+    <body>
+        <div class="corpo">
+            <div class="titulo">
+                Cadastre seu currículo<br/>
+            </div>
+            <br/><br/>
+            <form name="form1" autocomplete="off" action="salvarDados" method="POST">
+                <div class="sub-titulo">
+                    1. Dados Pessoais<br/>
+                </div>
+                <div class="descricao">
+                    Nome <input type="text" name="nome" placeholder="Digite seu nome" required/><br/>
+                    Data de nascimento<input type="date" name="data" required/><br/>
+                    Estado Civil
+                    <select name="estado civil" placeholder="Selecione o estado civil">
+                        <option value="casado">Casado(a)</option>
+                        <option selected value="solteiro">Solteiro(a)</option>
+                        <option value="viúvo">Viúvo(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                    </select>
+                    <br/>
+                    Sexo
+                    <input type="radio" name="sexo" value="male" />Masculino
+                    <input type="radio" name="sexo" value="female" />Feminino
+                </div>
+                <br/><br/>
+                <div class="sub-titulo">
+                    2. Objetivo<br/>
+                </div>
+                <div class="descricao">
+                    Objetivo <br/>
+                    <textarea name="objetivo" cols="100" rows="10" placeholder="Digite seu objetivo" required></textarea><br/>
+                </div>
+                <br/><br/>
+                <div class="sub-titulo">
+                    3. Contato<br/>
+                </div>
+                <div class="descricao">
+                    Endereço <input type="text" name="endereco" placeholder="Digite seu endereço" required/><br/>
+                    Cidade/Estado <input type="text" name="cidade" placeholder="Digite sua cidade" required/> / <input type="text" name="estado" placeholder="Digite seu estado" required/><br/>
+                    CEP <input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="99999-999" required/><br/>
+                    Telefone <input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}" placeholder="(99)9999-9999" required/><br/>
+                    E-mail <input type="text" name="e-mail" placeholder="Digite seu e-mail" required/><br/>
+                    Rede social
+                </div>
+                <br/><br/>
+                <div class="sub-titulo">
+                    4. Conhecimentos<br/>
+                </div>
+                <div class="descricao">
+                    Linguagens de Programação<br/>
+                    <input type="checkbox" name="linguagem" value="C/C++" />C/C++<br>
+                    <input type="checkbox" name="linguagem" value="Java" />Java<br>
+                    <input type="checkbox" name="linguagem" value="Visual Basic" />Visual Basic<br>
+                    <input type="checkbox" name="linguagem" value=".Net" />.Net<br>
+                    <input type="checkbox" name="linguagem" value="PHP" />PHP<br>
+                    <input type="checkbox" name="linguagem" value="Python" />Python<br>
+                    <input type="checkbox" name="linguagem" value="HTML"    />HTML<br>
+                    Idiomas
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
