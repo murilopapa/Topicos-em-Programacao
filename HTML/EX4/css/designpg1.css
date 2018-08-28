@@ -30,6 +30,7 @@ body{
     width: 25%;
     margin-top: 0.4%; 
     display: inline-block;
+    color: rgb(218, 126, 21);
 }
 
 .formulario{
@@ -51,4 +52,26 @@ option{
 }
 textarea{
     font-family: 'Comfortaa', cursive;
+}
+input:required:invalid, input:focus:invalid {
+    background-image: url(/EX4/img/wrong.gif);
+    background-position: 98%;
+    background-repeat: no-repeat;
+}
+textarea:required:invalid, textarea:focus:invalid {   
+    background-image: url(/EX4/img/wrong.gif);
+    background-position: 98%;
+    background-repeat: no-repeat;
+}
+   
+input:required:valid {
+    background-image: url(/EX4/img/check.png);
+    background-position: 98%;
+    background-repeat: no-repeat;
+}
+   
+textarea:required:valid {
+    background-image: url(/EX4/img/check.png);
+    background-position: 98%;
+    background-repeat: no-repeat;
 }
