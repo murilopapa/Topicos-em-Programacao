@@ -18,7 +18,7 @@
                 </div>
                 <div class="descricao">
                     <div class="texto">Nome</div> <div class="formulario"><input type="text" name="nome" placeholder="Digite seu nome" required/></div><br/>
-                    <div class="texto">Data de nascimento</div> <div class="formulario"><input type="date" name="data" required/></div><br/>
+                    <div class="texto">Data de nascimento</div> <div class="formulario"><input type="date" name="data"/></div><br/>
                     <div class="texto">Estado Civil</div>
                     <div class="formulario">
                         <select name="estado civil" placeholder="Selecione o estado civil">
@@ -49,12 +49,17 @@
                     3. Contato<br/>
                 </div>
                 <div class="descricao">
-                    <div class="texto">Endereço</div> <div class="formulario"><input type="text" name="endereco" placeholder="Digite seu endereço" required/></div><br/>
+                    <div class="texto">Endereço</div> <div class="formulario"><input type="text" name="endereco" placeholder="Digite seu endereço" required /></div><br/>
                     <div class="texto">Cidade/Estado</div> <div class="formulario"><input type="text" name="cidade" placeholder="Digite sua cidade" required/> / <input type="text" name="estado" placeholder="Digite seu estado" required/></div><br/>
-                    <div class="texto">CEP</div> <div class="formulario"><input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="99999-999" required/></div><br/>                    
-                    <div class="texto">Telefone</div> <div class="formulario"><input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}" placeholder="(99)9999-9999" required/></div><br/>
-                    <div class="texto">E-mail</div> <div class="formulario"><input type="text" name="e-mail" placeholder="Digite seu e-mail" required/></div><br/>
-                    <div class="texto">Rede social</div> <div class="formulario">paudemacaco</div>
+                    <div class="texto">CEP</div> <div class="formulario"><input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="12345-678" required/></div><br/>                    
+                    <div class="texto">Telefone</div> <div class="formulario"><input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}" placeholder="(01)2345-6789" required/></div><br/>
+                    <div class="texto">E-mail</div> <div class="formulario"><input type="email" name="e-mail" placeholder="Digite seu e-mail" required/></div><br/>
+                    <div class="texto"><br/>Rede social<br/><br/><br/></div>
+                    <div class="formulario">
+                        <img src="/EX4/img/face.png">http://facebook.com/ <input type="text" name="facebook" placeholder="Perfil do Facebook" /><br/>
+                        <img src="/EX4/img/linkedin.png">http://linkedin.com/ <input type="text" name="linkedin" placeholder="Perfil do Linkedin" /><br/>
+                        <img src="/EX4/img/skype.png"><input type="text" name="slype" placeholder="Perfil do Skype"/>
+                    </div>
                 </div>
                 <br/><br/>
                 <div class="sub-titulo">
