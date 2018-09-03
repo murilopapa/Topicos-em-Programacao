@@ -23,13 +23,15 @@
                     <div class="texto">Data de nascimento</div> <div class="formulario"><input type="date" name="data"/></div><br/>
                     <div class="texto">Estado Civil</div>
                     <div class="formulario">
-                        <select name="estado civil" placeholder="Selecione o estado civil">
+                        <select name="estado_civil">
+                            <option value="default">Selecione o estado civil</option>
                             <option value="casado">Casado(a)</option>
                             <option value="solteiro">Solteiro(a)</option>
                             <option value="viuvo">Viúvo(a)</option>
                             <option value="divorciado">Divorciado(a)</option>
                         </select>
-                    </div><br/>
+                    </div>
+                    <div id="estado_civil_erro" style="color: red;"></div>
                     <div class="texto">Sexo</div>
                     <div class="formulario">
                         <input type="radio" name="sexo" value="male" />Masculino
@@ -55,7 +57,7 @@
                     <div class="texto">Cidade/Estado</div> <div class="formulario"><input type="text" name="cidade" placeholder="Digite sua cidade" required/> / <input type="text" name="estado" placeholder="Digite seu estado" required/></div><br/>
                     <div class="texto">CEP</div> <div class="formulario"><input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="12345-678" required/></div><br/>                    
                     <div class="texto">Telefone</div> <div class="formulario"><input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}" placeholder="(01)2345-6789"/></div><br/>
-                    <div class="texto">E-mail</div> <div class="formulario"><input type="email" name="e-mail" placeholder="Digite seu e-mail"/></div><br/>
+                    <div class="texto">E-mail</div> <div class="formulario"><input type="email" name="email" placeholder="Digite seu e-mail"/></div><br/>
                     <div class="texto"><br/>Rede social<br/><br/><br/></div>
                     <div class="formulario">
                         <img src="/EX4/img/face.png">http://facebook.com/ <input type="text" name="facebook" placeholder="Perfil do Facebook" /><br/>
@@ -81,13 +83,15 @@
                     <div class="texto">Idiomas</div>
                     <div class="formulario">
                         Inglês 
-                        <select name="ingles" placeholder="Selecione o estado civil">
+                        <select name="ingles" >
+                            <option value="default">Nível</option>
                             <option value="basico">Básico</option>
                             <option value="intermediario">Intermediário</option>
                             <option value="avancado">Avançado</option>
                         </select>
                         | Espanhol
-                        <select name="espanhol" placeholder="Selecione o estado civil">
+                        <select name="espanhol" >
+                            <option value="default">Nível</option>
                             <option value="basico">Básico</option>
                             <option value="intermediario">Intermediário</option>
                             <option value="avancado">Avançado</option>

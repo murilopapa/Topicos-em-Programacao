@@ -37,7 +37,7 @@ body{
     background-color: rgb(238, 238, 238);
     position: relative;
     padding: 0.4%;   
-    width: 30%;
+    width: 50%;
     margin-top: 0.4%; 
     display: inline-block;
 }
@@ -49,6 +49,7 @@ button{
 }
 select{
     font-family: 'Comfortaa', cursive;
+    display: inline-block;
 }
 option{
     font-family: 'Comfortaa', cursive;
