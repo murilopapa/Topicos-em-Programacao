@@ -8,7 +8,7 @@ function limpa_formulario(){
 function verifica_formulario(){
     var nome = document.form1.nome.value;
     if(nome.length <= 3){
-        alert("Nome deve ser maior do que 3 caracteres");
+        alert("Nome deve ter mais do que 3 caracteres");
         document.form1.nome.value = null;
     }
     else{
@@ -25,10 +25,7 @@ function verifica_formulario(){
     document.form1.objetivo.value = objetivo.toLowerCase();
 
     if(document.form1.telefone.value === "" && document.form1.email.value === ""){
-        alert("telefone e email nao insercionado");
-    }
-    else{
-        alert("telefone ou email insercionado");
+        alert("Favor inserir telefone ou email");
     }
 
     var nivel_ingles = document.form1.ingles.value;

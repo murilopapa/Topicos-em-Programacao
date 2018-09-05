@@ -1,0 +1,15 @@
+body{
+    font-family: 'Comfortaa', cursive;
+    margin-left:3%;
+    margin-top: 3%;
+    background-color: rgb(209, 209, 209);
+}
+a:link{
+    color:black;
+}
+a:visited{
+    color:gray;
+}
+a:active{
+    color:black;
+}
