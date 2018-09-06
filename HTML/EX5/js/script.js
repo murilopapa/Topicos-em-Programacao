@@ -6,17 +6,20 @@ function limpa_formulario(){
 }
 
 function verifica_formulario(){
+    var verificacao = true;
     var nome = document.form1.nome.value;
     if(nome.length <= 3){
         alert("Nome deve ter mais do que 3 caracteres");
         document.form1.nome.value = null;
+        verificacao = false;
     }
     else{
         document.form1.nome.value = nome.toUpperCase();
     }
     var estado_civil = document.form1.estado_civil.value;
     if(estado_civil === "default"){
-        document.getElementById("estado_civil_erro").innerHTML = "Selecione um estado civil valido!" + "<br>" + "<br>";
+        document.getElementById("estado_civil_erro").innerHTML = "Selecione um estado civil valido!";
+        verificacao = false;
     }
     else{
         document.getElementById("estado_civil_erro").innerHTML = "";
@@ -26,6 +29,7 @@ function verifica_formulario(){
 
     if(document.form1.telefone.value === "" && document.form1.email.value === ""){
         alert("Favor inserir telefone ou email");
+        verificacao = false;
     }
 
     var nivel_ingles = document.form1.ingles.value;
@@ -33,6 +37,7 @@ function verifica_formulario(){
 
     if(nivel_espanhol === "default" || nivel_ingles === "default"){
         alert("Favor selecionar o nível de Ingles/Espanhol");
+        verificacao = false;
     }
     var linguagem_escolhida = document.getElementsByName("linguagem");
     var count_checkbox = 0;
@@ -43,9 +48,25 @@ function verifica_formulario(){
             count_checkbox++;
         }
     }
-    if(count_checkbox === 0){
-        confirm("Tem certeza que deseja enviar o formulário sem nenhuma linguagem de programação escolhida?");
+    if(verificacao){
+        if(count_checkbox === 0){
+            var opcao = confirm("Tem certeza que deseja enviar o formulário sem nenhuma linguagem de programação escolhida?");
+            if(opcao){
+                alert("FORMULARIO ENVIADO");
+            }
+            else{
+                alert("FORMULARIO NAO ENVIADO");
+            }
+        }
+        else{
+            alert("FORMULARIO ENVIADO");
+        }
+        
+    }
+    else{
+        alert("FORMULARIO NAO ENVIADO");
     }
     
 
 }
+
