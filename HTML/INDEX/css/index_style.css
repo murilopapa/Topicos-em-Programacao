@@ -1,15 +1,30 @@
+*{
+    margin:0 auto;
+}
 body{
     font-family: 'Comfortaa', cursive;
-    margin-left:3%;
-    margin-top: 3%;
-    background-color: rgb(209, 209, 209);
+    background-color: #393e46;
 }
 a:link{
-    color:black;
+    text-decoration:none;
+    color:#eeeeee;
 }
 a:visited{
-    color:gray;
+    text-decoration:none;
+    color:#eeeeee;
 }
 a:active{
-    color:black;
+    text-decoration:none;
+    color:#eeeeee;
+}
+.titulo{
+    height: 100%;
+    width: 100%;
+    padding: 3%;
+    background-color: #7971ea;
+    color: #393e46;
+}
+.corpo{
+    padding: 2%;
+    color: #eeeeee;
 }
