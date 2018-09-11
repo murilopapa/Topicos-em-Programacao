@@ -2,6 +2,7 @@
     margin:0 auto;
 }
 body{
+    font-size: 1.5em;
     height: 100%;
     width: 100%;
     font-family: 'Comfortaa', cursive;
@@ -25,6 +26,7 @@ a:active{
     color: #393e46;
 }
 .corpo{
+    height: 100%;
     padding: 2%;
     color: #eeeeee;
 }
