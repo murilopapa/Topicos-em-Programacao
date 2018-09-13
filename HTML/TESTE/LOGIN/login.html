@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="js/login.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCfAk5tYFWfpsvZi6UDIFLpo2sELVpT76k",
+            authDomain: "projeto-teste-ded26.firebaseapp.com",
+            databaseURL: "https://projeto-teste-ded26.firebaseio.com",
+            projectId: "projeto-teste-ded26",
+            storageBucket: "projeto-teste-ded26.appspot.com",
+            messagingSenderId: "577466942401"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.4.1/firebaseui.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'main.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // tosUrl and privacyPolicyUrl accept either url string or a callback
+            // function.
+            // Terms of service url/callback.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url/callback.
+            privacyPolicyUrl: function () {
+                alert("sem pagina de politica de privacidade");
+                window.location.assign('<your-privacy-policy-url>');
+            }
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+</head>
+
+<body>
+    <div id="firebaseui-auth-container"></div>
+</body>
+
+</html>

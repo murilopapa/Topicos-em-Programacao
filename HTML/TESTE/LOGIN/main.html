@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="js/main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCfAk5tYFWfpsvZi6UDIFLpo2sELVpT76k",
+            authDomain: "projeto-teste-ded26.firebaseapp.com",
+            databaseURL: "https://projeto-teste-ded26.firebaseio.com",
+            projectId: "projeto-teste-ded26",
+            storageBucket: "projeto-teste-ded26.appspot.com",
+            messagingSenderId: "577466942401"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <h1>Bem vindo a pag, seu idiota</h1>
+    <div id="sign-in-status"></div>
+    <div id="sign-in"></div>
+    <div id="account-name"></div>
+    <div id="account-picture"></div>
+    <div id="is-new-user">Existing User</div>
+    <button >Logout</button>
+</body>
+
+</html>
