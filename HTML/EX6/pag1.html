@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>JOGO</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/pag1.css" />
+    <script src="js/pag1.js"></script>
+</head>
+
+<body>
+    <div>QUEM É ESSE RAPAZOTE</div>
+    <form name="form1" autocomplete="off" action="salvarDados" method="POST">
+
+        <select name="dificuldade">
+            <option value="default">--Selecione a dificuldade--</option>
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+
+        <input type="button" value="Iniciar" onClick="iniciajogo()"  />
+    </form>
+
+</body>
+
+</html>

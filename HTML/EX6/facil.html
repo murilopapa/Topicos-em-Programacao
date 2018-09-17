@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/facil.css" />
+    <script src="js/facil.js"></script>
+</head>
+
+<body onload="sorteio();">
+    <div class="titulo">
+        <h1>Quem é o rapazote?</h1>
+    </div>
+    <div class="game_info">
+        <span>Pontuação:</span><span id="pontuacao"> 0</span> <img width="2.5%" height="2.5%" src="img/full-heart.png">
+    </div>
+    <div class="imagem">
+            <img width="10%" height="10%" src="img/nobody_m.original.jpg">
+    </div>
+    <div class="botoes">
+        <form name="form1" autocomplete="off" action="salvarDados" method="POST">
+            <input id="botao1" type="button" value="Default" onClick="submissao(1);" />
+            <input id="botao2" type="button" value="Default" onClick="submissao(2);" />
+            <input id="botao3" type="button" value="Default" onClick="submissao(3);" />
+            <input id="botao4" type="button" value="Default" onClick="submissao(4);" />
+        </form>
+    </div>
+</body>
+
+</html>
