@@ -1,0 +1,1 @@
+var dados_facil = '[{"nome":"cachorro", "src":"img/cachorro.jpg"},{"nome":"calopsita", "src":"img/calopsita.jpg"}, {"nome":"gato", "src":"img/gato.jpg"}, {"nome":"macaco", "src":"img/macaco.jpeg"}, {"nome":"rato", "src":"img/rato.jpg"}]';
