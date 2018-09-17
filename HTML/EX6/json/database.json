@@ -1,1 +1,3 @@
-var dados_facil = '[{"nome":"cachorro", "src":"img/cachorro.jpg"},{"nome":"calopsita", "src":"img/calopsita.jpg"}, {"nome":"gato", "src":"img/gato.jpg"}, {"nome":"macaco", "src":"img/macaco.jpeg"}, {"nome":"rato", "src":"img/rato.jpg"}]';
+var dados_facil = '[{"nome":"cachorro", "src":"img/cachorro1.jpg"},{"nome":"calopsita", "src":"img/calopsita1.jpg"}, {"nome":"gato", "src":"img/gato1.jpg"}, {"nome":"macaco", "src":"img/macaco1.jpeg"}, {"nome":"rato", "src":"img/rato1.jpg"}]';
+
+var dados_medio = '[{"nome":"ettore", "src":"img/ettore.jpg"},{"nome":"joao", "src":"img/joao.jpg"}, {"nome":"pupo", "src":"img/pupo.jpg"}, {"nome":"rodrigo", "src":"img/rodrigo.jpg"}, {"nome":"zorzi", "src":"img/zorzi.jpg"}]';
