@@ -4,26 +4,27 @@
 <head>
     <meta charset="utf-8" />
     <title>Dificuldade: Fácil</title>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/facil.css" />
-    <script type="text/javascript" src="json/database.json" charset="utf-8"></script>
-    <script src="js/facil.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">     <!--link para as fontes-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/facil.css" />   <!--link para o css-->
+    <script type="text/javascript" src="json/database.json" charset="utf-8"></script>   <!--link para o JSON-->
+    <script src="js/facil.js"></script> <!--link para o js-->
 </head>
 
-<body onload="carrega_json()">
+<body onload="carrega_json()">  <!--funcao para ler o JSON-->
     <script>
         function carrega_json(){
             var f = JSON.parse(dados_facil);
-            sorteio(f);
+            sorteio(f);     //manda para a função sorteio, no js
         }
     </script>
     <div class="titulo">
-        <h1>Quem é o rapazote?</h1>
+        <h1>Quem é o rapazote?</h1> <!--titulo do game-->
     </div>
     <div class="game_info">
-        <span>Pontuação:</span><span id="pontuacao"> 0</span> <img width="2.5%" height="2.5%" src="img/full-heart.png">
+        <!--pontuação que muda dinamicamente conforme o jogador acerta a resposta / span para exibir a img do coração-->
+        <span>Pontuação:</span><span id="pontuacao"> 0</span> <span class="vidas" id="img_vidas"></span> 
     </div>
-    <div id="imagem" class="imagem"></div>
+    <div id="imagem" class="imagem"></div> <!--div para exibir a foto para adivinhar-->
     <div class="botoes">
         <form name="form1" autocomplete="off" action="salvarDados" method="POST">
             <input id="botao1" type="button" value="Default" onClick="submissao(1);" />
