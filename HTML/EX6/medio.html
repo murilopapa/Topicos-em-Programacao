@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Dificuldade: Medio</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">     <!--link para as fontes-->
     <link rel="stylesheet" type="text/css" media="screen" href="css/medio.css" />   <!--link para o css-->
     <script type="text/javascript" src="json/database.json" charset="utf-8"></script>   <!--link para o JSON-->
@@ -24,13 +25,13 @@
         <!--pontuação que muda dinamicamente conforme o jogador acerta a resposta / span para exibir a img do coração-->
         <span>Pontuação:</span><span id="pontuacao"> 0</span> <span class="vidas" id="img_vidas"></span> 
     </div>
-    <div id="imagem" class="imagem"></div> <!--div para exibir a foto para adivinhar-->
-    <div class="botoes">
+    <div id="imagem"></div> <!--div para exibir a foto para adivinhar-->
+    <div>
         <form name="form1" autocomplete="off" action="salvarDados" method="POST">
-            <input id="botao1" type="button" value="Default" onClick="submissao(1);" />
-            <input id="botao2" type="button" value="Default" onClick="submissao(2);" />
-            <input id="botao3" type="button" value="Default" onClick="submissao(3);" />
-            <input id="botao4" type="button" value="Default" onClick="submissao(4);" />
+            <input class="botoes" id="botao1" type="button" value="Default" onClick="submissao(1);" />
+            <input class="botoes" id="botao2" type="button" value="Default" onClick="submissao(2);" />
+            <input class="botoes" id="botao3" type="button" value="Default" onClick="submissao(3);" />
+            <input class="botoes" id="botao4" type="button" value="Default" onClick="submissao(4);" />
         </form>
     </div>
 </body>

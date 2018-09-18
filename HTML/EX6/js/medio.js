@@ -13,12 +13,12 @@ function get_dados_nivel_anterior() {   //função que pega os dados do nivel an
     if (pontuacao_recebida != null && pontuacao_recebida != 0) {    //se nao é a primeira vez no site, e a pontuação nao é 0 (nao da pra chegar no nivel medio com uma pontuação de 0)
         vidas = parseInt(vidas_recebida);       //transformo em int
         pontuacao = parseInt(pontuacao_recebida);//transformo em int
-        localStorage.setItem("quantidade_vidas", 0 );//seto como 0, pq peguei ja os dados
-        localStorage.setItem("pontuacao", 0 ); //seto como 0, pq peguei ja os dados
+        localStorage.setItem("quantidade_vidas", 0);//seto como 0, pq peguei ja os dados
+        localStorage.setItem("pontuacao", 0); //seto como 0, pq peguei ja os dados
     }
-    else{   //primeira vez no nivel medio
-        pontuacao=0;    
-        vidas=3;
+    else {   //primeira vez no nivel medio
+        pontuacao = 0;
+        vidas = 3;
     }
 }
 
@@ -51,6 +51,7 @@ function sorteio(database_recebida) {
 }
 
 function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fase
+    
     //escrevo no HTML o codigo para exibir a foto sorteada
     document.getElementById("imagem").innerHTML = "<img width=" + "20%" + " height=" + "20%" + " src=" + database[vetor_sorteado[ponteiro_vetor]].src + ">";
 
@@ -97,16 +98,26 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
 }
 
 function submissao(num_botao) {
+
+
+   
+    
     //vejo se o valor do botao pressionado é o mesmo valor da imagem
+    
     if (document.getElementById("botao" + num_botao).value === database[vetor_sorteado[ponteiro_vetor]].nome) {
         //se sim...
         console.log("Resposta correta!");
+        
         ponteiro_vetor++; //ando com o meu ponteiro 
         pontuacao += valor_pontuacao;   //somo a pontuação
         if (ponteiro_vetor < database.length) { //se eu ainda tiver dados pra exibir, eu exibo
-            jogo_inciado();
+          document.getElementById("imagem").innerHTML = "<img width=" + "20%" + " height=" + "20%" + " src=" + database[vetor_sorteado[ponteiro_vetor-1]].src2 + ">";  
+          setTimeout(jogo_inciado, 1000);
         }
         else {  //se nao, significa que eu acabei a fase
+            document.getElementById("imagem").innerHTML = "<img width=" + "20%" + " height=" + "20%" + " src=" + database[vetor_sorteado[ponteiro_vetor-1]].src2 + ">";
+            //mostra a foto real, e mostra o botao pro prox nivel
+            //funcao do botao pro prox nivel deve fazer as ações abaixo:
             alert("FASE CONCLUIDA! ENCAMINHADO PARA NIVEL DIFICIL!");
             localStorage.setItem("quantidade_vidas", vidas);    //salvo a quantidade de vidas
             localStorage.setItem("pontuacao", pontuacao);       //salvo a pontuação atual para a prox fase

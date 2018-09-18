@@ -36,7 +36,7 @@ function sorteio(database_recebida) {
 
 function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fase
     //escrevo no HTML o codigo para exibir a foto sorteada
-    document.getElementById("imagem").innerHTML = "<img width=" + "23%" + " height=" + "23%" + " src=" + database[vetor_sorteado[ponteiro_vetor]].src + ">";
+    document.getElementById("imagem").innerHTML = "<img class = " + "imagem" + " width=" + "23%" + " height=" + "23%" + " src=" + database[vetor_sorteado[ponteiro_vetor]].src + ">";
 
     //basicamente a mesma coisa da função acima, que gerava o vetor aleatorio, faz a mesma coisa pra
     //gerar os botoes aleatoriamente
