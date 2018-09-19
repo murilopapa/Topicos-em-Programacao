@@ -1,15 +1,16 @@
+*{
+    margin:0 auto;
+}
 body{
+    text-align: center;
     font-family: 'Bungee Shade', cursive;
 }
 .game_info{
+    top:0%;
     font-size:1.5em;
 }
-.imagem{
-    padding:0%;
-    border-style: solid;
-}
 .vidas{
-    margin-left: 15%;
+    margin-left: 10%;
 }
 .botoes{
     font-family: 'Press Start 2P', cursive;

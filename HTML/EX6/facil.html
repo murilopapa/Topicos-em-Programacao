@@ -6,7 +6,7 @@
     <title>Dificuldade: Fácil</title>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
     <!--link para as fontes-->
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/facil.css" />
     <!--link para o css-->
     <script type="text/javascript" src="json/database.json" charset="utf-8"></script>
@@ -29,9 +29,14 @@
     </div>
     <div class="game_info">
         <!--pontuação que muda dinamicamente conforme o jogador acerta a resposta / span para exibir a img do coração-->
-        <span>Pontuação:</span><span id="pontuacao"> 0</span> <span class="vidas" id="img_vidas"></span>
+        Pontuação:<span id="pontuacao"> 0</span>
+        <img width="2.5%" height="2.5%" class="vidas" id="img_vidas">
     </div>
-    <div id="imagem"></div>
+    <input class="botoes" style="visibility: hidden; margin-bottom: 1%" id="botao0" type="button" value="Nivel medio"
+        onclick="prox_fase()" />
+    <div>
+        <img id="imagem" width="23%" height="23%">
+    </div>
     <!--div para exibir a foto para adivinhar-->
     <div>
         <form name="form1" autocomplete="off" action="salvarDados" method="POST">

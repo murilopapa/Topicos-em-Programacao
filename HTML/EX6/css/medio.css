@@ -1,16 +1,18 @@
-body{
-    font-family: 'Bungee Shade', cursive;
+*{
+    margin:0 auto;
 }
-.vidas{
-    margin-left: 15%;
+body{
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
 }
 .game_info{
     font-size:1.5em;
 }
-
-.imagem{
-    padding:0%;
-    border-style: solid;
+.vidas{
+    margin-left: 10%;
+}
+.prox_nivel{
+    visibility: hidden;
 }
 .botoes{
     font-family: 'Press Start 2P', cursive;
@@ -38,4 +40,3 @@ body{
     color:white;
 	background-color:rgb(124, 124, 124);
 }
-

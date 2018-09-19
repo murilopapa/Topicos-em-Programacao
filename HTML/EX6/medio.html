@@ -4,28 +4,40 @@
 <head>
     <meta charset="utf-8" />
     <title>Dificuldade: Medio</title>
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">  
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">     <!--link para as fontes-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/medio.css" />   <!--link para o css-->
-    <script type="text/javascript" src="json/database.json" charset="utf-8"></script>   <!--link para o JSON-->
-    <script src="js/medio.js"></script> <!--link para o js-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <!--link para as fontes-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/medio.css" />
+    <!--link para o css-->
+    <script type="text/javascript" src="json/database.json" charset="utf-8"></script>
+    <!--link para o JSON-->
+    <script src="js/medio.js"></script>
+    <!--link para o js-->
 </head>
 
-<body onload="carrega_json()">  <!--funcao para ler o JSON-->
+<body onload="carrega_json()">
+    <!--funcao para ler o JSON-->
     <script>
-        function carrega_json(){
+        function carrega_json() {
             var f = JSON.parse(dados_medio);
             sorteio(f);     //manda para a função sorteio, no js
         }
     </script>
     <div class="titulo">
-        <h1>Quem é o rapazote?</h1> <!--titulo do game-->
+        <h1>Quem é o rapazote?</h1>
+        <!--titulo do game-->
     </div>
     <div class="game_info">
         <!--pontuação que muda dinamicamente conforme o jogador acerta a resposta / span para exibir a img do coração-->
-        <span>Pontuação:</span><span id="pontuacao"> 0</span> <span class="vidas" id="img_vidas"></span> 
+        Pontuação:<span id="pontuacao"> 0</span>
+        <img width="2.5%" height="2.5%" class="vidas" id="img_vidas">
     </div>
-    <div id="imagem"></div> <!--div para exibir a foto para adivinhar-->
+    <input class="botoes" style="visibility: hidden; margin-bottom: 1%" id="botao0" type="button" value="Nivel dificil"
+        onclick="prox_fase()" />
+    <div>
+        <img id="imagem" width="17%" height="17%">
+    </div>
+    <!--div para exibir a foto para adivinhar-->
     <div>
         <form name="form1" autocomplete="off" action="salvarDados" method="POST">
             <input class="botoes" id="botao1" type="button" value="Default" onClick="submissao(1);" />

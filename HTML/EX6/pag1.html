@@ -5,24 +5,25 @@
     <meta charset="utf-8" />
     <title>JOGO</title>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/pag1.css" />
     <script src="js/pag1.js"></script>
 </head>
 
 <body>
-    <h1>QUEM É ESSE RAPAZOTE ?</h1>
-    <div
-    ><h2>THE GAME</h2></div>
+    <div>
+        <h1>QUEM É ESSE RAPAZOTE ?</h1>
+        <h2>THE GAME</h2>
+    </div>
     <form name="form1" autocomplete="off" action="salvarDados" method="POST">
 
         <select name="dificuldade">
-            <option value="default">--Selecione a dificuldade--</option>
+            <option value="default" disabled selected >--Selecione a dificuldade--</option>
             <option value="facil">Fácil</option>
             <option value="medio">Médio</option>
             <option value="dificil">Difícil</option>
         </select>
-
+        <br/>
         <input class="botoes" type="button" value="Iniciar" onClick="iniciajogo()" />
     </form>
 

@@ -35,8 +35,14 @@ function sorteio(database_recebida) {
 }
 
 function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fase
+    //deixa os botoes clicaveis
+    document.getElementById("botao1").disabled = false;
+    document.getElementById("botao2").disabled = false;
+    document.getElementById("botao3").disabled = false;
+    document.getElementById("botao4").disabled = false;
+
     //escrevo no HTML o codigo para exibir a foto sorteada
-    document.getElementById("imagem").innerHTML = "<img class = " + "imagem" + " width=" + "23%" + " height=" + "23%" + " src=" + database[vetor_sorteado[ponteiro_vetor]].src + ">";
+    document.getElementById("imagem").src = database[vetor_sorteado[ponteiro_vetor]].src;
 
     //basicamente a mesma coisa da função acima, que gerava o vetor aleatorio, faz a mesma coisa pra
     //gerar os botoes aleatoriamente
@@ -80,6 +86,12 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
     document.form1.botao4.value = database[vetor_botoes[3]].nome;
 }
 
+function prox_fase() {
+    localStorage.setItem("quantidade_vidas", vidas);    //salvo a quantidade de vidas
+    localStorage.setItem("pontuacao", pontuacao);       //salvo a pontuação atual para a prox fase
+    window.location = "medio.html";     //vou para a prox fase
+}
+
 function submissao(num_botao) {
     //vejo se o valor do botao pressionado é o mesmo valor da imagem
     if (document.getElementById("botao" + num_botao).value === database[vetor_sorteado[ponteiro_vetor]].nome) {
@@ -87,14 +99,21 @@ function submissao(num_botao) {
         console.log("Resposta correta!");
         ponteiro_vetor++; //ando com o meu ponteiro 
         pontuacao += valor_pontuacao;   //somo a pontuação
+        //desabilito os botoes
+        document.getElementById("botao1").disabled = true;
+        document.getElementById("botao2").disabled = true;
+        document.getElementById("botao3").disabled = true;
+        document.getElementById("botao4").disabled = true;
+
         if (ponteiro_vetor < database.length) { //se eu ainda tiver dados pra exibir, eu exibo
-            jogo_inciado();
+            document.getElementById("imagem").src = database[vetor_sorteado[ponteiro_vetor - 1]].src2;
+            setTimeout(jogo_inciado, 1000);
         }
         else {  //se nao, significa que eu acabei a fase
-            alert("FASE CONCLUIDA! ENCAMINHADO PARA NIVEL MEDIO!");
-            localStorage.setItem("quantidade_vidas", vidas);    //salvo a quantidade de vidas
-            localStorage.setItem("pontuacao", pontuacao);       //salvo a pontuação atual para a prox fase
-            window.location = "medio.html";     //vou para a prox fase
+            document.getElementById("imagem").src = database[vetor_sorteado[ponteiro_vetor - 1]].src2;
+            //mostra a foto real, e mostra o botao pro prox nivel
+            atualiza_vidas();
+            document.getElementById("botao0").style.visibility = "visible";
         }
     }
     else {  //se eu tiver errado...
@@ -108,15 +127,18 @@ function submissao(num_botao) {
     }
 }
 function atualiza_vidas() {     //função para atualizar a img do coração conforme as vidas restantes
+    //printo a pontuação
+    document.getElementById("pontuacao").innerHTML = pontuacao;
+
     switch (vidas) {
         case 1:
-            document.getElementById("img_vidas").innerHTML = "<img width=" + "2.5%" + " height=" + "2.5%" + " src=" + "img/empty-heart.png" + ">";
+            document.getElementById("img_vidas").src = "img/empty-heart.png";
             break;
         case 2:
-            document.getElementById("img_vidas").innerHTML = "<img width=" + "2.5%" + " height=" + "2.5%" + " src=" + "img/half-heart.png" + ">";
+            document.getElementById("img_vidas").src = "img/half-heart.png";
             break;
         case 3:
-            document.getElementById("img_vidas").innerHTML = "<img width=" + "2.5%" + " height=" + "2.5%" + " src=" + "img/full-heart.png" + ">";
+            document.getElementById("img_vidas").src = "img/full-heart.png";
             break;
     }
 }

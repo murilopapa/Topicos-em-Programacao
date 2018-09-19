@@ -1,5 +1,5 @@
-var dados_facil = '[{"nome":"Cachorro", "src":"img/cachorro1.jpg"},{"nome":"Calopsita", "src":"img/calopsita1.jpg"}, {"nome":"Gato", "src":"img/gato1.jpg"}, {"nome":"Macaco", "src":"img/macaco1.jpg"}, {"nome":"Rato", "src":"img/rato1.jpg"}]';
+var dados_facil = '[{"nome":"Cachorro", "src":"img/Cachorro1.PNG", "src2":"img/Cachorro.PNG"},{"nome":"Calopsita", "src":"img/Calopsita1.PNG", "src2":"img/Calopsita.PNG"}, {"nome":"Gato", "src":"img/Gato1.PNG", "src2":"img/Gato.PNG"}, {"nome":"Macaco", "src":"img/Macaco1.PNG", "src2":"img/Macaco.PNG"}, {"nome":"Rato", "src":"img/Rato1.PNG", "src2":"img/Rato.PNG"}]';
 
 var dados_medio = '[{"nome":"Ettore", "src":"img/ettoreHead2.PNG", "src2":"img/ettoreHead.jpg"},{"nome":"Joao", "src":"img/joaoHead2.PNG", "src2":"img/joaoHead.jpg"}, {"nome":"Matheus P.", "src":"img/pupoHead2.PNG", "src2":"img/pupoHead.jpg"}, {"nome":"Rodrigo", "src":"img/rodrigoHead2.PNG", "src2":"img/rodrigoHead.jpg"}, {"nome":"Mateus Z.", "src":"img/zorziHead2.PNG", "src2":"img/zorziHead.jpg"}]';
 
-var dados_dificil = '[{"nome":"Cachorro", "src":"img/cachorro1.jpg"},{"nome":"Calopsita", "src":"img/calopsita1.jpg"}, {"nome":"Gato", "src":"img/gato1.jpg"}, {"nome":"Macaco", "src":"img/macaco1.jpg"}, {"nome":"Rato", "src":"img/rato1.jpg"}, {"nome":"Ettore", "src":"img/ettoreHead2.PNG"},{"nome":"Joao", "src":"img/joaoHead2.PNG"}, {"nome":"Matheus P.", "src":"img/pupoHead2.PNG"}, {"nome":"Rodrigo", "src":"img/rodrigoHead2.PNG"}, {"nome":"Mateus Z.", "src":"img/zorziHead2.PNG"}]'
+var dados_dificil = '[]'
