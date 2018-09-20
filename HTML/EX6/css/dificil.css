@@ -6,11 +6,13 @@ body{
     font-family: 'Bungee Shade', cursive;
 }
 .game_info{
-    top:0%;
     font-size:1.5em;
 }
 .vidas{
     margin-left: 10%;
+}
+.prox_nivel{
+    visibility: hidden;
 }
 .botoes{
     font-family: 'Press Start 2P', cursive;
@@ -35,5 +37,6 @@ body{
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+    color:white;
 	background-color:rgb(124, 124, 124);
 }

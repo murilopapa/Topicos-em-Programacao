@@ -40,6 +40,12 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
     document.getElementById("botao2").disabled = false;
     document.getElementById("botao3").disabled = false;
     document.getElementById("botao4").disabled = false;
+    
+
+    document.getElementById("botao1").style.backgroundColor = "rgb(241,241,241)";
+    document.getElementById("botao2").style.backgroundColor = "rgb(241,241,241)";
+    document.getElementById("botao3").style.backgroundColor = "rgb(241,241,241)";
+    document.getElementById("botao4").style.backgroundColor = "rgb(241,241,241)";
 
     //escrevo no HTML o codigo para exibir a foto sorteada
     document.getElementById("imagem").src = database[vetor_sorteado[ponteiro_vetor]].src;
@@ -58,11 +64,7 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
         if (i != posicao_resposta_certa) {
             booleano = false;
             num_sorteado = Math.floor((Math.random() * vetor_botoes.length));
-            for (var j = 0; j < vetor_botoes.length; j++) {
-                if (vetor_botoes[j] === num_sorteado) {
-                    booleano = true;
-                }
-            }
+            booleano = vetor_botoes.includes(num_sorteado);
             if (booleano) {
                 num_sorteado = Math.floor((Math.random() * database.length));
                 i--;
@@ -96,6 +98,7 @@ function submissao(num_botao) {
     //vejo se o valor do botao pressionado é o mesmo valor da imagem
     if (document.getElementById("botao" + num_botao).value === database[vetor_sorteado[ponteiro_vetor]].nome) {
         //se sim...
+        document.getElementById("botao" + num_botao).style.backgroundColor = "#42f445";
         console.log("Resposta correta!");
         ponteiro_vetor++; //ando com o meu ponteiro 
         pontuacao += valor_pontuacao;   //somo a pontuação
@@ -118,6 +121,9 @@ function submissao(num_botao) {
     }
     else {  //se eu tiver errado...
         vidas--;    //tirou uma vida
+        
+        document.getElementById("botao" + num_botao).style.backgroundColor = "#f44141";
+        document.getElementById("botao" + num_botao).disabled = true;
         if (vidas === 0) {  //se as vidas for = 0
             alert("PERDEU, ACABARAM AS VIDAS! ENCAMINHADO PARA PAGINA PRINCIPAL!");
             window.location = "pag1.html"       //volto pra pag inicial

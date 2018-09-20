@@ -105,16 +105,14 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
 function prox_fase() {
     localStorage.setItem("quantidade_vidas", vidas);    //salvo a quantidade de vidas
     localStorage.setItem("pontuacao", pontuacao);       //salvo a pontuação atual para a prox fase
-    window.location = "dificil.html";     //vou para a prox fase
+    window.location = "pag1.html";     //vou para a prox fase
 }
 function submissao(num_botao) {
     //vejo se o valor do botao pressionado é o mesmo valor da imagem
 
     if (document.getElementById("botao" + num_botao).value === database[vetor_sorteado[ponteiro_vetor]].nome) {
         //se sim...
-
         document.getElementById("botao" + num_botao).style.backgroundColor = "#42f445";
-
         console.log("Resposta correta!");
 
         ponteiro_vetor++; //ando com o meu ponteiro 
@@ -140,7 +138,6 @@ function submissao(num_botao) {
         vidas--;    //tirou uma vida
         document.getElementById("botao" + num_botao).style.backgroundColor = "#f44141";
         document.getElementById("botao" + num_botao).disabled = true;
-
         if (vidas === 0) {  //se as vidas for = 0
             alert("PERDEU, ACABARAM AS VIDAS! ENCAMINHADO PARA PAGINA PRINCIPAL!");
             window.location = "pag1.html"       //volto pra pag inicial

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dificuldade: Dificil</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <!--link para as fontes-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/dificil.css" />
+    <!--link para o css-->
+    <script type="text/javascript" src="json/database.json" charset="utf-8"></script>
+    <!--link para o JSON-->
+    <script src="js/dificil.js"></script>
+    <!--link para o js-->
+</head>
+
+<body onload="carrega_json()">
+    <!--funcao para ler o JSON-->
+    <script>
+        function carrega_json() {
+            var f = JSON.parse(dados_dificil);
+            sorteio(f);     //manda para a função sorteio, no js
+        }
+    </script>
+    <div class="titulo">
+        <h1>Quem é a pessoa?</h1>
+        <!--titulo do game-->
+    </div>
+    <div class="game_info">
+        <!--pontuação que muda dinamicamente conforme o jogador acerta a resposta / span para exibir a img do coração-->
+        Pontuação:<span id="pontuacao"> 0</span>
+        <img width="2.5%" height="2.5%" class="vidas" id="img_vidas">
+    </div>
+    <input class="botoes" style="visibility: hidden; margin-bottom: 1%" id="botao0" type="button" value="Menu principal"
+        onclick="prox_fase()" />
+    <div>
+        <img id="imagem" width="17%" height="17%">
+    </div>
+    <!--div para exibir a foto para adivinhar-->
+    <div>
+        <form name="form1" autocomplete="off" action="salvarDados" method="POST">
+            <input class="botoes" id="botao1" type="button" value="Default" onClick="submissao(1);" />
+            <input class="botoes" id="botao2" type="button" value="Default" onClick="submissao(2);" />
+            <input class="botoes" id="botao3" type="button" value="Default" onClick="submissao(3);" />
+            <input class="botoes" id="botao4" type="button" value="Default" onClick="submissao(4);" />
+        </form>
+    </div>
+</body>
+
+</html>
