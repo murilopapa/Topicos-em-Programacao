@@ -9,4 +9,3 @@ Repositorio para trabalhos da disciplina Topicos em Programação
 * EX5
 * EX6
 * PROJ1
-* TESTE (pasta para paginas de teste)
