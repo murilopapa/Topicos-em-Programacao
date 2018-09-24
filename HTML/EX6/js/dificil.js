@@ -3,7 +3,7 @@ var vetor_sorteado; //vetor contendo os indices sorteados para serem pegos no ve
 var ponteiro_vetor = 0; //qual elemento do vetor_sorteado eu estou exibindo na tela
 var pontuacao;      //pontuação
 var vidas;          //vidas
-var valor_pontuacao = 100; //valor de cada acerto
+var valor_pontuacao = 150; //valor de cada acerto
 var quantidade_de_botoes = 4;   //quantidade de botoes, acho que nao vira mudar, pq nos logs eu to fazendo manualmente a quantidade
 
 
