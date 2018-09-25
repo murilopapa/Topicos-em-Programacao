@@ -6,7 +6,17 @@ var vidas = 3;  //quantidade de vidas inicial, como é o primeiro nive, começa 
 var valor_pontuacao = 50;   //valor de cada acerto
 var quantidade_de_botoes = 4;   //quantidade de botoes, acho que nao vira mudar, pq nos logs eu to fazendo manualmente a quantidade
 
+
 function sorteio(database_recebida) {
+    var config = {
+        apiKey: "AIzaSyB9H9S94tRSMT8ll21eCJD-DNLTndbMcFc",
+        authDomain: "ex6-tp.firebaseapp.com",
+        databaseURL: "https://ex6-tp.firebaseio.com",
+        projectId: "ex6-tp",
+        storageBucket: "ex6-tp.appspot.com",
+        messagingSenderId: "770797914160"
+    };
+    firebase.initializeApp(config);
     vetor_sorteado = new Array(database_recebida.length);   //crio o array de numeros, do tamanho do database
     database = database_recebida;     //seto o database global, com o recebido pelo HTML
     var booleano;
@@ -40,7 +50,7 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
     document.getElementById("botao2").disabled = false;
     document.getElementById("botao3").disabled = false;
     document.getElementById("botao4").disabled = false;
-    
+
 
     document.getElementById("botao1").style.backgroundColor = "rgb(241,241,241)";
     document.getElementById("botao2").style.backgroundColor = "rgb(241,241,241)";
@@ -121,12 +131,19 @@ function submissao(num_botao) {
     }
     else {  //se eu tiver errado...
         vidas--;    //tirou uma vida
-        
+
         document.getElementById("botao" + num_botao).style.backgroundColor = "#f44141";
         document.getElementById("botao" + num_botao).disabled = true;
         if (vidas === 0) {  //se as vidas for = 0
             alert("PERDEU, ACABARAM AS VIDAS! ENCAMINHADO PARA PAGINA PRINCIPAL!");
-            window.location = "pag1.html"       //volto pra pag inicial
+            alert("PONTUAÇÃO FINAL: " + pontuacao);
+            if (confirm("Deseja salvar a pontuação?")) {
+                var nome = prompt("Insira seu nome:");
+                registra_pontuacao(nome, pontuacao);
+
+            }
+            setTimeout(function(){window.location = "pag1.html" }, 4000);
+                  //volto pra pag inicial
 
         }
         atualiza_vidas();       //se nao for = 0, atualizo a foto do coração
@@ -147,4 +164,15 @@ function atualiza_vidas() {     //função para atualizar a img do coração con
             document.getElementById("img_vidas").src = "img/full-heart.png";
             break;
     }
+}
+
+
+function registra_pontuacao(nome_recebido, pontuacao_recebida) {
+
+    var data = {
+        nome: nome_recebido,
+        pontuacao: pontuacao_recebida
+    };
+    firebase.database().ref("scoreboard").push(data);
+
 }
