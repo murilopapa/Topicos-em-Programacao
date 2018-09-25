@@ -8,13 +8,13 @@ var quantidade_de_botoes = 4;   //quantidade de botoes, acho que nao vira mudar,
 
 
 function get_dados_nivel_anterior() {   //função que pega os dados do nivel anterior
-    var pontuacao_recebida = localStorage.getItem("pontuacao");     //pego a pontuação anterior
-    var vidas_recebida = localStorage.getItem("quantidade_vidas");  //pego as vidas anterior
+    var pontuacao_recebida = localStorage.getItem("pontuacao_facil");     //pego a pontuação anterior
+    var vidas_recebida = localStorage.getItem("quantidade_vidas_facil");  //pego as vidas anterior
     if (pontuacao_recebida != null && pontuacao_recebida != 0) {    //se nao é a primeira vez no site, e a pontuação nao é 0 (nao da pra chegar no nivel medio com uma pontuação de 0)
         vidas = parseInt(vidas_recebida);       //transformo em int
         pontuacao = parseInt(pontuacao_recebida);//transformo em int
-        localStorage.setItem("quantidade_vidas", 0);//seto como 0, pq peguei ja os dados
-        localStorage.setItem("pontuacao", 0); //seto como 0, pq peguei ja os dados
+        localStorage.setItem("quantidade_vidas_facil", 0);//seto como 0, pq peguei ja os dados
+        localStorage.setItem("pontuacao_facil", 0); //seto como 0, pq peguei ja os dados
     }
     else {   //primeira vez no nivel medio
         pontuacao = 0;
@@ -103,8 +103,8 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
     document.form1.botao4.value = database[vetor_botoes[3]].nome;
 }
 function prox_fase() {
-    localStorage.setItem("quantidade_vidas", vidas);    //salvo a quantidade de vidas
-    localStorage.setItem("pontuacao", pontuacao);       //salvo a pontuação atual para a prox fase
+    localStorage.setItem("quantidade_vidas_medio", vidas);    //salvo a quantidade de vidas
+    localStorage.setItem("pontuacao_medio", pontuacao);       //salvo a pontuação atual para a prox fase
     window.location = "dificil.html";     //vou para a prox fase
 }
 function submissao(num_botao) {
