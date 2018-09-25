@@ -89,8 +89,8 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
 }
 
 function prox_fase() {
-    localStorage.setItem("quantidade_vidas", vidas);    //salvo a quantidade de vidas
-    localStorage.setItem("pontuacao", pontuacao);       //salvo a pontuação atual para a prox fase
+    localStorage.setItem("quantidade_vidas_facil", vidas);    //salvo a quantidade de vidas
+    localStorage.setItem("pontuacao_facil", pontuacao);       //salvo a pontuação atual para a prox fase
     window.location = "medio.html";     //vou para a prox fase
 }
 
