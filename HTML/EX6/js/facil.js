@@ -142,8 +142,8 @@ function submissao(num_botao) {
                 registra_pontuacao(nome, pontuacao);
 
             }
-            setTimeout(function(){window.location = "pag1.html" }, 4000);
-                  //volto pra pag inicial
+            setTimeout(function () { window.location = "pag1.html" }, 4000);
+            //volto pra pag inicial
 
         }
         atualiza_vidas();       //se nao for = 0, atualizo a foto do coração

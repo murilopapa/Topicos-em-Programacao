@@ -1,109 +1,126 @@
 <!DOCTYPE html>
-<html lang = "pt-BR" >
-    <head>
-        <meta charset="utf-8">
-        <script type="text/javascript" src="js/script.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa|Jua" rel="stylesheet">
-        <link rel="shortcut icon" href="img/bookstack_libr_3024.ico">
-        <link rel="stylesheet" type="text/css" href="css/designpg1.css">
-        <title>Curriculo</title>
-    </head>
-    <body>
-        <div>
-            <div class="titulo">
-                Cadastre seu currículo<br/>
-            </div>
-            <br/><br/>
-            <form name="form1" autocomplete="off" action="salvarDados" method="POST">
-                <div class="sub-titulo">
-                    1. Dados Pessoais<br/>
-                </div>
-                <div class="descricao">
-                    <div class="texto">Nome</div> <div class="formulario"><input type="text"size=50% name="nome" placeholder="Digite seu nome" required/></div><br/>
-                    <div class="texto">Data de nascimento</div> <div class="formulario"><input type="date" name="data"/></div><br/>
-                    <div class="texto">Estado Civil</div>
-                    <div class="formulario">
-                        <select name="estado_civil">
-                            <option value="default">Selecione o estado civil</option>
-                            <option value="casado">Casado(a)</option>
-                            <option value="solteiro">Solteiro(a)</option>
-                            <option value="viuvo">Viúvo(a)</option>
-                            <option value="divorciado">Divorciado(a)</option>
-                        </select>
-                        <div id="estado_civil_erro" style="color:red; float: right;"></div>
-                    </div>
-                    
-                    <div class="texto">Sexo</div>
-                    <div class="formulario">
-                        <input type="radio" name="sexo" value="male" />Masculino
-                        <input type="radio" name="sexo" value="female" />Feminino
-                    </div>
-                </div>
-                <br/><br/>
-                <div class="sub-titulo">
-                    2. Objetivo<br/>
-                </div>
-                <div class="descricao">
-                    <div class="texto">Objetivo<br/><br/></div>
-                    <div class="formulario">
-                        <textarea name="objetivo" cols="54" rows="2" placeholder="Digite seu objetivo" required></textarea>
-                    </div>
-                </div>
-                <br/><br/>
-                <div class="sub-titulo">
-                    3. Contato<br/>
-                </div>
-                <div class="descricao">
-                    <div class="texto">Endereço</div> <div class="formulario"><input type="text" name="endereco" size = 50% placeholder="Digite seu endereço" required /></div><br/>
-                    <div class="texto">Cidade/Estado</div> <div class="formulario"><input type="text" name="cidade" size = 25% placeholder="Digite sua cidade" required/> / <input type="text" name="estado" size = 25% placeholder="Digite seu estado" required/></div><br/>
-                    <div class="texto">CEP</div> <div class="formulario"><input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="12345-678" required/></div><br/>                    
-                    <div class="texto">Telefone</div> <div class="formulario"><input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}" placeholder="(01)2345-6789"/></div><br/>
-                    <div class="texto">E-mail</div> <div class="formulario"><input type="email" name="email" size = 50% placeholder="Digite seu e-mail"/></div><br/>
-                    <div class="texto"><br/>Rede social<br/><br/><br/></div>
-                    <div class="formulario">
-                        <img src="img/face.png">http://facebook.com/ <input type="text" name="facebook" size = 30% placeholder="Perfil do Facebook" /><br/>
-                        <img src="img/linkedin.png">http://linkedin.com/ <input type="text" name="linkedin" size = 30% placeholder="Perfil do Linkedin" /><br/>
-                        <img src="img/skype.png"><input type="text" name="slype" size = 30% placeholder="Perfil do Skype"/>
-                    </div>
-                </div>
-                <br/><br/>
-                <div class="sub-titulo">
-                    4. Conhecimentos<br/>
-                </div>
-                <div class="descricao">
-                    <div class="texto"><br/><br/><br/>Linguagens de Programação<br/><br/><br/><br/></div>
-                    <div class="formulario">
-                        <input type="checkbox" name="linguagem" value="C/C++" />C/C++<br>
-                        <input type="checkbox" name="linguagem" value="Java" />Java<br>
-                        <input type="checkbox" name="linguagem" value="Visual Basic" />Visual Basic<br>
-                        <input type="checkbox" name="linguagem" value=".Net" />.Net<br>
-                        <input type="checkbox" name="linguagem" value="PHP" />PHP<br>
-                        <input type="checkbox" name="linguagem" value="Python" />Python<br>
-                        <input type="checkbox" name="linguagem" value="HTML"    />HTML<br>
-                    </div><br/>
-                    <div class="texto">Idiomas</div>
-                    <div class="formulario">
-                        Inglês 
-                        <select name="ingles" >
-                            <option value="default">Nível</option>
-                            <option value="basico">Básico</option>
-                            <option value="intermediario">Intermediário</option>
-                            <option value="avancado">Avançado</option>
-                        </select>
-                        | Espanhol
-                        <select name="espanhol" >
-                            <option value="default">Nível</option>
-                            <option value="basico">Básico</option>
-                            <option value="intermediario">Intermediário</option>
-                            <option value="avancado">Avançado</option>
-                        </select>
-                    </div>
-                </div>
-                <br/><br/>
-                <input type="button" value="Limpar" onClick="limpa_formulario()"  /> |
-                <input type="button" value="Enviar" onClick="verifica_formulario()"  />
-                <br/><br/><br/><br/><br/><br/>
-            </form>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Jua" rel="stylesheet">
+    <link rel="shortcut icon" href="img/bookstack_libr_3024.ico">
+    <link rel="stylesheet" type="text/css" href="css/designpg1.css">
+    <title>Curriculo</title>
+</head>
+
+<body>
+    <div>
+        <div class="titulo">
+            Cadastre seu currículo<br />
         </div>
-    </body>
+        <br /><br />
+        <form name="form1" autocomplete="off" action="salvarDados" method="POST">
+            <div class="sub-titulo">
+                1. Dados Pessoais<br />
+            </div>
+            <div class="descricao">
+                <div class="texto">Nome</div>
+                <div class="formulario"><input type="text" size=50% name="nome" placeholder="Digite seu nome" required /></div><br />
+                <div class="texto">Data de nascimento</div>
+                <div class="formulario"><input type="date" name="data" /></div><br />
+                <div class="texto">Estado Civil</div>
+                <div class="formulario">
+                    <select name="estado_civil">
+                        <option value="default">Selecione o estado civil</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                    </select>
+                    <div id="estado_civil_erro" style="color:red; float: right;"></div>
+                </div>
+
+                <div class="texto">Sexo</div>
+                <div class="formulario">
+                    <input type="radio" name="sexo" value="male" />Masculino
+                    <input type="radio" name="sexo" value="female" />Feminino
+                </div>
+            </div>
+            <br /><br />
+            <div class="sub-titulo">
+                2. Objetivo<br />
+            </div>
+            <div class="descricao">
+                <div class="texto">Objetivo<br /><br /></div>
+                <div class="formulario">
+                    <textarea name="objetivo" cols="54" rows="2" placeholder="Digite seu objetivo" required></textarea>
+                </div>
+            </div>
+            <br /><br />
+            <div class="sub-titulo">
+                3. Contato<br />
+            </div>
+            <div class="descricao">
+                <div class="texto">Endereço</div>
+                <div class="formulario"><input type="text" name="endereco" size=50% placeholder="Digite seu endereço"
+                        required /></div><br />
+                <div class="texto">Cidade/Estado</div>
+                <div class="formulario"><input type="text" name="cidade" size=25% placeholder="Digite sua cidade"
+                        required /> / <input type="text" name="estado" size=25% placeholder="Digite seu estado"
+                        required /></div><br />
+                <div class="texto">CEP</div>
+                <div class="formulario"><input type="text" name="cep" pattern="[0-9]{5}[\-][0-9]{3}" placeholder="12345-678"
+                        required /></div><br />
+                <div class="texto">Telefone</div>
+                <div class="formulario"><input type="text" name="telefone" pattern="[/(][0-9]{2}[/)][0-9]{4}[/-][0-9]{4}"
+                        placeholder="(01)2345-6789" /></div><br />
+                <div class="texto">E-mail</div>
+                <div class="formulario"><input type="email" name="email" size=50% placeholder="Digite seu e-mail" /></div><br />
+                <div class="texto"><br />Rede social<br /><br /><br /></div>
+                <div class="formulario">
+                    <img src="img/face.png">http://facebook.com/ <input type="text" name="facebook" size=30%
+                        placeholder="Perfil do Facebook" /><br />
+                    <img src="img/linkedin.png">http://linkedin.com/ <input type="text" name="linkedin" size=30%
+                        placeholder="Perfil do Linkedin" /><br />
+                    <img src="img/skype.png"><input type="text" name="slype" size=30% placeholder="Perfil do Skype" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="sub-titulo">
+                4. Conhecimentos<br />
+            </div>
+            <div class="descricao">
+                <div class="texto"><br /><br /><br />Linguagens de Programação<br /><br /><br /><br /></div>
+                <div class="formulario">
+                    <input type="checkbox" name="linguagem" value="C/C++" />C/C++<br>
+                    <input type="checkbox" name="linguagem" value="Java" />Java<br>
+                    <input type="checkbox" name="linguagem" value="Visual Basic" />Visual Basic<br>
+                    <input type="checkbox" name="linguagem" value=".Net" />.Net<br>
+                    <input type="checkbox" name="linguagem" value="PHP" />PHP<br>
+                    <input type="checkbox" name="linguagem" value="Python" />Python<br>
+                    <input type="checkbox" name="linguagem" value="HTML" />HTML<br>
+                </div><br />
+                <div class="texto">Idiomas</div>
+                <div class="formulario">
+                    Inglês
+                    <select name="ingles">
+                        <option value="default">Nível</option>
+                        <option value="basico">Básico</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                    | Espanhol
+                    <select name="espanhol">
+                        <option value="default">Nível</option>
+                        <option value="basico">Básico</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                </div>
+            </div>
+            <br /><br />
+            <input type="button" value="Limpar" onClick="limpa_formulario()" /> |
+            <input type="button" value="Enviar" onClick="verifica_formulario()" />
+            <br /><br /><br /><br /><br /><br />
+        </form>
+    </div>
+</body>
+
 </html>
