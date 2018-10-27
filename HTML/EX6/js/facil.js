@@ -8,15 +8,6 @@ var quantidade_de_botoes = 4;   //quantidade de botoes, acho que nao vira mudar,
 
 
 function sorteio(database_recebida) {
-    var config = {
-        apiKey: "AIzaSyB9H9S94tRSMT8ll21eCJD-DNLTndbMcFc",
-        authDomain: "ex6-tp.firebaseapp.com",
-        databaseURL: "https://ex6-tp.firebaseio.com",
-        projectId: "ex6-tp",
-        storageBucket: "ex6-tp.appspot.com",
-        messagingSenderId: "770797914160"
-    };
-    firebase.initializeApp(config);
     vetor_sorteado = new Array(database_recebida.length);   //crio o array de numeros, do tamanho do database
     database = database_recebida;     //seto o database global, com o recebido pelo HTML
     var booleano;
@@ -137,12 +128,7 @@ function submissao(num_botao) {
         if (vidas === 0) {  //se as vidas for = 0
             alert("PERDEU, ACABARAM AS VIDAS! ENCAMINHADO PARA PAGINA PRINCIPAL!");
             alert("PONTUAÇÃO FINAL: " + pontuacao);
-            if (confirm("Deseja salvar a pontuação?")) {
-                var nome = prompt("Insira seu nome:");
-                registra_pontuacao(nome, pontuacao);
-
-            }
-            setTimeout(function () { window.location = "pag1.html" }, 4000);
+            window.location = "pag1.html";
             //volto pra pag inicial
 
         }
@@ -164,15 +150,4 @@ function atualiza_vidas() {     //função para atualizar a img do coração con
             document.getElementById("img_vidas").src = "img/full-heart.png";
             break;
     }
-}
-
-
-function registra_pontuacao(nome_recebido, pontuacao_recebida) {
-
-    var data = {
-        nome: nome_recebido,
-        pontuacao: pontuacao_recebida
-    };
-    firebase.database().ref("scoreboard").push(data);
-
 }
