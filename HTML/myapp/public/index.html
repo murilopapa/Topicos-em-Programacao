@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Node + MySQL</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/index.css" />
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Jua" rel="stylesheet">
+    <script src="javascripts/index.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: '/cliente/lista',
+                dataType: 'json',
+                error: function (dados) {
+                    alert('Erro: ' + dados.data);
+                },
+                success: function (dados) {
+                    if (dados.status === 'ERRO')
+                        alert('Erro: ' + dados.data);
+                    else
+                        exibeClientes(dados.data);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button onClick="window.location.href ='/insereCliente.html';">INCLUIR CLIENTE</button>
+    <div id="result"></div>
+</body>
+
+</html>
