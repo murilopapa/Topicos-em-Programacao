@@ -143,6 +143,7 @@ function submissao(num_botao) {
 
         if (vidas === 0) {  //se as vidas for = 0
             alert("PERDEU, ACABARAM AS VIDAS! ENCAMINHADO PARA PAGINA PRINCIPAL!");
+            alert("PONTUAÇÃO FINAL: "+ pontuacao);
             window.location = "pag1.html"       //volto pra pag inicial
 
         }

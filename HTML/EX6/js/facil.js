@@ -6,6 +6,7 @@ var vidas = 3;  //quantidade de vidas inicial, como é o primeiro nive, começa 
 var valor_pontuacao = 50;   //valor de cada acerto
 var quantidade_de_botoes = 4;   //quantidade de botoes, acho que nao vira mudar, pq nos logs eu to fazendo manualmente a quantidade
 
+
 function sorteio(database_recebida) {
     vetor_sorteado = new Array(database_recebida.length);   //crio o array de numeros, do tamanho do database
     database = database_recebida;     //seto o database global, com o recebido pelo HTML
@@ -40,7 +41,7 @@ function jogo_inciado() { //funcao para exibir na tela os dados daquele nivel/fa
     document.getElementById("botao2").disabled = false;
     document.getElementById("botao3").disabled = false;
     document.getElementById("botao4").disabled = false;
-    
+
 
     document.getElementById("botao1").style.backgroundColor = "rgb(241,241,241)";
     document.getElementById("botao2").style.backgroundColor = "rgb(241,241,241)";
@@ -121,12 +122,14 @@ function submissao(num_botao) {
     }
     else {  //se eu tiver errado...
         vidas--;    //tirou uma vida
-        
+
         document.getElementById("botao" + num_botao).style.backgroundColor = "#f44141";
         document.getElementById("botao" + num_botao).disabled = true;
         if (vidas === 0) {  //se as vidas for = 0
             alert("PERDEU, ACABARAM AS VIDAS! ENCAMINHADO PARA PAGINA PRINCIPAL!");
-            window.location = "pag1.html"       //volto pra pag inicial
+            alert("PONTUAÇÃO FINAL: " + pontuacao);
+            window.location = "pag1.html";
+            //volto pra pag inicial
 
         }
         atualiza_vidas();       //se nao for = 0, atualizo a foto do coração
